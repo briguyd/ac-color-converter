@@ -1,0 +1,31 @@
+Notes:
+
+30 Hues
+15 Vividness
+15 Brightness
+
+
+
+const oldHValue = 113;
+
+let oldHRange = 360;
+let newHRange = 30;
+let newHValue = ((oldHValue * newHRange) / oldHRange);
+
+
+
+const oldSValue = 83;
+
+let oldSRange = 100;
+let newSRange = 15;
+let newSValue = ((oldSValue * newSRange) / oldSRange);
+
+
+
+const oldVValue = 84;
+
+let oldVRange = 100;
+let newVRange = 15;
+let newVValue = ((oldVValue * newVRange) / oldVRange);
+
+https://stackblitz.com/edit/angular-w3school-image-magnification

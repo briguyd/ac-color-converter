@@ -1,0 +1,27 @@
+<img #image [src]="url" class="imageLoader" style="display: none;"> <br />
+
+<canvas #canvas width="600" height="600" style="border:1px solid #c3c3c3;" (click)="getColor($event)">
+  Your browser does not support the canvas element.
+</canvas>
+<input type='file' (change)="onSelectFile($event)">
+
+
+<!-- <canvas #colorPreview width="400" height="400" style="border:1px solid #c3c3c3;">
+  Your browser does not support the canvas element.
+</canvas> -->
+
+<canvas #colorPreviewRGB width="400" height="400" style="border:1px solid #c3c3c3;">
+  Your browser does not support the canvas element.
+</canvas>
+
+<div>
+  <h2>HSV Value</h2>
+  <span *ngIf="hsvVal">H: {{hsvVal.h}} S: {{hsvVal.s}}% V: {{hsvVal.v}}%</span>
+
+  <h2>Animal Crossing Value</h2>
+
+  <span *ngIf="acVal">H: {{acVal.h}} S: {{acVal.s}} V: {{acVal.v}}</span>
+
+
+
+</div>
