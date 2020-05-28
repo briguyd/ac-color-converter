@@ -6,10 +6,10 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
   styleUrls: ['./image-upload.component.scss']
 })
 export class ImageUploadComponent implements OnInit {
-  @ViewChild('image') image: ElementRef;
-  @ViewChild('canvas') public canvas: ElementRef;
+  @ViewChild('image', { static: true }) image: ElementRef;
+  @ViewChild('canvas', { static: true }) public canvas: ElementRef;
   // @ViewChild('colorPreview') public colorPreview: ElementRef;
-  @ViewChild('colorPreviewRGB') public colorPreviewRGB: ElementRef;
+  @ViewChild('colorPreviewRGB', { static: true }) public colorPreviewRGB: ElementRef;
   url: string | ArrayBuffer;
 
   hsvVal = null;
