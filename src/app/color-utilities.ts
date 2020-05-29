@@ -2,16 +2,16 @@ import { HSV } from './hsv';
 
 export function convertToACHSV(hsv: HSV): HSV {
   const oldHRange = 360;
-  const newHRange = 30;
-  const newHValue = ((hsv.h * newHRange) / oldHRange);
+  const newHRange = 29;
+  const newHValue = ((hsv.h * newHRange) / oldHRange) + 1;
 
   const oldSRange = 100;
-  const newSRange = 15;
-  const newSValue = ((hsv.s * newSRange) / oldSRange);
+  const newSRange = 14;
+  const newSValue = ((hsv.s * newSRange) / oldSRange) + 1;
 
   const oldVRange = 100;
-  const newVRange = 15;
-  const newVValue = ((hsv.v * newVRange) / oldVRange);
+  const newVRange = 14;
+  const newVValue = ((hsv.v * newVRange) / oldVRange) + 1;
 
   return {h: Math.round(newHValue), s: Math.round(newSValue), v: Math.round(newVValue)};
 }
